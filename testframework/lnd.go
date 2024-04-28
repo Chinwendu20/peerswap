@@ -321,6 +321,7 @@ func (n *LndNode) OpenChannel(peer LightningNode, capacity, pushAmt uint64, conn
 		NodePubkey:         pk,
 		LocalFundingAmount: int64(capacity),
 		PushSat:            int64(pushAmt),
+		TargetConf:         6,
 	})
 	if err != nil {
 		return "", fmt.Errorf("OpenChannel() %w", err)
